@@ -1,0 +1,85 @@
+.cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.cartItems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cartItem {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 60%;
+  margin: 20px;
+  padding: 10px;
+}
+.cartImage {
+  width: 100px;
+}
+
+.ItemName {
+  font-size: 1.5rem;
+}
+.ItemPrice {
+  font-size: 1rem;
+}
+.CartItemDescription {
+  width: 80%;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemsBtn {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.itemsBtn input {
+  width: 40%;
+  border: 2px solid black;
+  padding: 5px 10px;
+  margin: 4px;
+}
+.itemsBtn button {
+  border: 2px solid black;
+  padding: 3px 10px;
+  margin: 4px;
+  background-color: transparent;
+  font-size: 1.1rem;
+  transition: all 200ms ease-in-out;
+}
+.itemsBtn button:hover {
+  background-color: black;
+  color: white;
+}
+ .checkout button{
+  padding: 10px 15px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  transition: all 200ms ease-in-out;
+ }
+ .checkout button:hover{
+  background-color: transparent;
+  color: black;
+ }
