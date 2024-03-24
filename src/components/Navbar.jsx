@@ -6,7 +6,11 @@ import './Navbar.css';
 export const Navbar = () => {
   return (
     <div className='navbar'>
+      <h4 className='lego'>Mahsa's E-Commerce Shop</h4>
       <div className='links'>
+        <Link to='signin' className='link'>
+          SignIn
+        </Link>
         <Link to='/' className='link'>
           Shop
         </Link>

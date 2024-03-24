@@ -1,0 +1,89 @@
+.signInContainer {
+  width: 98%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signInForm {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 400ms ease-out;
+}
+.signInIcon {
+  font-size: 1.6rem;
+  color: rgb(75, 75, 75);
+  font-weight: 700;
+  margin-right: 10px;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formInputs {
+  width: 70%;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: rgb(237, 235, 235);
+  color: rgb(75, 75, 75);
+  font-size: 1rem;
+}
+.submitContainer {
+  width: 80%;
+  margin-top: 20px;
+}
+.submit {
+  display: flex;
+  justify-content: right;
+}
+.submitBtn {
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 2px solid rgb(78, 144, 251);
+  border-radius: 4px;
+  color: rgb(78, 144, 251);
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: all 200ms ease-in-out;
+}
+.submitBtn:hover {
+  background-color: rgb(78, 144, 251);
+  color: whitesmoke;
+}
+.linkToLogin {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.linkToLogin p {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: rgb(104, 103, 103);
+}
+.toLogin {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: rgb(78, 144, 251);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+.form-header{
+  color: rgb(78, 144, 251);
+  margin: 10px;
+}

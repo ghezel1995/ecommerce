@@ -4,6 +4,8 @@ import { Cart } from './pages/cart/Cart';
 import { Shop } from './pages/shop/Shop';
 import './App.css';
 import { ShopContextProvider } from './context/shop-context';
+import { SignIn } from './pages/auth/SignIn';
+import { Login } from './pages/auth/Login';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Shop />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/signin' element={<SignIn />} />
+            <Route path='/login' element={<Login />} />
           </Routes>
         </BrowserRouter>
       </ShopContextProvider>

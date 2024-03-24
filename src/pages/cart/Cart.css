@@ -17,6 +17,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
+
 }
 .cartItem {
   display: flex;
@@ -24,8 +26,8 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 60%;
-  margin: 20px;
   padding: 10px;
+  margin-top: 20px;
 }
 .cartImage {
   width: 100px;
@@ -70,9 +72,12 @@
   background-color: black;
   color: white;
 }
+.checkout{
+  margin: 50px;
+}
  .checkout button{
   padding: 10px 15px;
-  margin: 10px;
+  margin: 20px;
   border: 2px solid black;
   border-radius: 15px;
   background-color: black;
