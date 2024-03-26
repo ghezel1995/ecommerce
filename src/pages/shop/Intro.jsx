@@ -1,44 +1,38 @@
-import React from 'react'
-import background from '../../asset/intro.jpg';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import './Intro.css';
 
-export const Intro = () => {
-    const styles = {
-      container: {
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundImage: `url(${background})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        minHeight: '100vh',
-      },
-      overlay: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      },
-      content: {
-        position: 'relative', // Ensures content is positioned relative to the container
-        zIndex: 1, // Set a higher z-index to ensure content appears on top of the overlay
-        padding: '20px', // Adjust padding as needed
-        textAlign: 'center',
-      },
-    };
+export const Intro = ({ isAuthenticated, userName }) => {
   return (
-    <div style={styles.container}>
+    <div className='container'>
       <div className='main'>
-        <div style={styles.overlay}></div>
-        <div style={styles.content}>
-          <h2>Hi, Welcome!</h2>
-          <Link to='/'>Get Started</Link>
-          <Link to='signin'>Sign Up</Link>
+        <div className='overlay'></div>
+        <div className='content'>
+          {isAuthenticated ? (
+            <>
+              <div className='welcome-message'>
+                <h1>Welcome, {userName}!</h1>
+                <p>Hope you enjoy shopping.</p>
+              </div>
+            </>
+          ) : (
+            <>
+              <h1>Welcome to Mahsa's E-Commerce Shop!</h1>
+              <p>Before starting to shop, please sign up.</p>
+            </>
+          )}
+          <div className='link-container'>
+            <Link to='/shop' className='home-link'>
+              Go to shop
+            </Link>
+            {!isAuthenticated && (
+              <Link to='signin' className='home-link'>
+                Sign Up
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};

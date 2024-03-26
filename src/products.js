@@ -11,8 +11,8 @@ import product8 from './asset/08.png'
 export const PRODUCTS = [
   {
     id: 1,
-    name: 'IPhone',
-    price: 1999.0,
+    name: 'Jeans',
+    price: 40.0,
     productImage: product1,
   },
   {

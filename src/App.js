@@ -30,16 +30,9 @@ function App() {
             isAuthenticated={isAuthenticated}
             handleLogout={handleLogout}
           />
-          {isAuthenticated && (
-            <>
-              <div className='welcome-message'>
-                <h1>Welcome, {userName}!</h1>
-                <p>Hope you enjoy shopping.</p>
-              </div>
-            </>
-          )}
           <Routes>
-            <Route path='/' element={<Shop />} />
+            <Route path='/' element={<Intro isAuthenticated={isAuthenticated} userName={userName} />} />
+            <Route path='shop' element = {<Shop />} />
             <Route path='intro' element={<Intro />} />
             <Route path='/cart' element={<Cart />} />
             <Route

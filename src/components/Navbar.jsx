@@ -17,7 +17,9 @@ export const Navbar = ({ isAuthenticated, handleLogout }) => {
 
   return (
     <div className='navbar'>
-      <h4 className='lego'>Mahsa's E-Commerce Shop</h4>
+      <Link to='/' className='link'>
+        Mahsa's E-Commerce Shop
+      </Link>
       <div className='links'>
         {!isAuthenticated && (
           <Link to='signin' className='link'>
@@ -30,10 +32,10 @@ export const Navbar = ({ isAuthenticated, handleLogout }) => {
               Logout
             </button>
             {showLogoutConfirmation && (
-              <div className='overlay'>
+              <div className='overlay-logout'>
                 <div className='logout-confirmation'>
                   <p>Are you sure you want to logout?</p>
-                  <button onClick={confirmLogout}>Yes, I'm sure</button>
+                  <button onClick={confirmLogout}>Yes</button>
                   <button onClick={() => setShowLogoutConfirmation(false)}>
                     No
                   </button>
