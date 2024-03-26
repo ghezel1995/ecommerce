@@ -1,5 +1,11 @@
+.shop{
+  margin-top: 100px;
+}
+
+.shopTitle{
+  margin: 20px;
+}
 .products {
-  margin-top: 150px;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

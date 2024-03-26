@@ -24,6 +24,10 @@
   color: white;
   margin-left: 20px;
   font-size: 25px;
+  transition: all 200ms ease-in-out;
+}
+.link:hover{
+  color: wheat;
 }
 
 .lego{
