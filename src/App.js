@@ -5,28 +5,39 @@ import { Shop } from './pages/shop/Shop';
 import './App.css';
 import { ShopContextProvider } from './context/shop-context';
 import { SignIn } from './pages/auth/SignIn';
-import { Login } from './pages/auth/Login';
 import { Intro } from './pages/shop/Intro';
 import { useState } from 'react';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userName, setUserName] = useState('');
 
-  const handleAuthentication = () => {
+  const handleAuthentication = (name) => {
     setIsAuthenticated(true);
+    setUserName(name);
   };
   const handleLogout = () => {
     setIsAuthenticated(false);
+    setUserName('');
   };
+
   return (
     <div>
       <ShopContextProvider>
         <BrowserRouter>
           <Navbar
+            userName={userName}
             isAuthenticated={isAuthenticated}
             handleLogout={handleLogout}
           />
-          {/* {!isAuthenticated && <SignIn onAuth={handleAuthentication} />} */}
+          {isAuthenticated && (
+            <>
+              <div className='welcome-message'>
+                <h1>Welcome, {userName}!</h1>
+                <p>Hope you enjoy shopping.</p>
+              </div>
+            </>
+          )}
           <Routes>
             <Route path='/' element={<Shop />} />
             <Route path='intro' element={<Intro />} />
@@ -35,7 +46,6 @@ function App() {
               path='/signin'
               element={<SignIn onAuth={handleAuthentication} />}
             />
-            <Route path='/login' element={<Login />} />
           </Routes>
         </BrowserRouter>
       </ShopContextProvider>

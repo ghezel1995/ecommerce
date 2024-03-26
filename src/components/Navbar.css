@@ -26,10 +26,66 @@
   font-size: 25px;
   transition: all 200ms ease-in-out;
 }
-.link:hover{
+.link:hover {
   color: wheat;
 }
 
-.lego{
+.lego {
   color: wheat;
+}
+
+.logout {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.logout:hover {
+  color: wheat;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999; 
+}
+
+.logout-confirmation {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+  width: 300px;
+}
+
+.logout-confirmation p {
+  margin-bottom: 1.2rem;
+}
+
+.logout-confirmation button {
+  padding: 5px 15px;
+  background-color: transparent;
+  color: black;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.logout-confirmation button:hover {
+  color: rgb(117, 116, 115);
+}
+
+/* Optional: Center the logout confirmation vertically and horizontally */
+.logout-confirmation {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

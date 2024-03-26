@@ -26,11 +26,18 @@ export const Navbar = ({ isAuthenticated, handleLogout }) => {
         )}
         {isAuthenticated && (
           <>
-            <button onClick={handleLogoutClick}>Logout</button>
+            <button className='logout' onClick={handleLogoutClick}>
+              Logout
+            </button>
             {showLogoutConfirmation && (
-              <div className='logout-confirmation'>
-                <p>Are you sure you want to logout?</p>
-                <button onClick={confirmLogout}>Yes, I'm sure</button>
+              <div className='overlay'>
+                <div className='logout-confirmation'>
+                  <p>Are you sure you want to logout?</p>
+                  <button onClick={confirmLogout}>Yes, I'm sure</button>
+                  <button onClick={() => setShowLogoutConfirmation(false)}>
+                    No
+                  </button>
+                </div>
               </div>
             )}
           </>

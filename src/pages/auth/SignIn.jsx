@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Person, Envelope, Key } from 'react-bootstrap-icons';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Submit.css';
 
 export const SignIn = ({ onAuth }) => {
@@ -26,7 +26,7 @@ export const SignIn = ({ onAuth }) => {
       setPassword('');
       console.log('Authentication successful');
 
-      onAuth();
+      onAuth(name);
     } else {
       setError('Please provide both email and password');
     }
@@ -46,6 +46,7 @@ export const SignIn = ({ onAuth }) => {
             onChange={(e) => setName(e.target.value)}
             className='formInputs'
             placeholder='username'
+            autoComplete='off'
           />
         </div>
         <div className='inputContainer'>
@@ -77,12 +78,6 @@ export const SignIn = ({ onAuth }) => {
           </div>
         </div>
       </form>
-      <div className='linkToLogin'>
-        <p>You already have an account?</p>
-        <Link to='/login' className='toLogin'>
-          Login
-        </Link>
-      </div>
     </div>
   );
 };
