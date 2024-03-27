@@ -56,3 +56,10 @@ img {
   background-color: black;
   color: white;
 }
+.detailLink{
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  padding: 10px 0;
+  cursor: pointer;
+}

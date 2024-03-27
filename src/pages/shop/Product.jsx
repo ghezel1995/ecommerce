@@ -13,7 +13,7 @@ export const Product = (props) => {
     <div className='product'>
       <img src={productImage} alt={name} />
       <div className='description'>
-        <Link to={`/product/${id}`}>
+        <Link className='detailLink' to={`/product/${id}`}>
           <h3>{name}</h3>
         </Link>
         <div className='add'>
