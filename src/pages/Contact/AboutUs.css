@@ -1,0 +1,70 @@
+.contact {
+  width: 50%;
+  height: 60vh;
+  margin-top: 100px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: whitesmoke;
+  border-radius: 4px;
+  overflow: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.left {
+  width: 40%;
+  margin: 10px;
+}
+.header-about {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.welcome-header {
+  color: rgb(251, 185, 63);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.about-text {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.about-link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 20px;
+  padding: 5px 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.about-link:hover {
+  color: rgb(251, 185, 63);
+   border: 1px solid rgb(251, 185, 63);
+}
+.icons{
+    margin-top: 30px;
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.icon-link{
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+      transition: all 200ms ease-in-out;
+}
+.icon-link:hover{
+    color: rgb(251, 185, 63);
+}
+.right {
+  width: 40%;
+}
+.right img {
+  width: 100%;
+}

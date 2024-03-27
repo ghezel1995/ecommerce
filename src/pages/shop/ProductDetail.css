@@ -47,13 +47,14 @@
 }
 
 .backBtn{
-  width: 100%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-decoration: none;
   border: 1px solid black;
   border-radius: 4px;
+  background-color: transparent;
   color: black;
   font-size: 1.2rem;
   font-weight: 600;
@@ -62,4 +63,13 @@
 }
 .backBtn:hover{
   opacity: 50%;
+}
+
+.detailButtons{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.addDetail{
+  padding: 5px 10px;
 }

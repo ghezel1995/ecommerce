@@ -18,7 +18,7 @@ export const Navbar = ({ isAuthenticated, handleLogout }) => {
   return (
     <div className='navbar'>
       <Link to='/' className='link'>
-        Mahsa's E-Commerce Shop
+        Mahsa's Shop
       </Link>
       <div className='links'>
         {!isAuthenticated && (
@@ -44,11 +44,14 @@ export const Navbar = ({ isAuthenticated, handleLogout }) => {
             )}
           </>
         )}
+        <Link to='about' className='link'>
+          About
+        </Link>
         <Link to='/shop' className='link'>
           Shop
         </Link>
         <Link to='cart' className='link'>
-          <Cart3 />
+          <Cart3 /> Cart
         </Link>
       </div>
     </div>
