@@ -18,7 +18,7 @@
 }
 .content{
   position: relative;
-  z-index: 10000;
+  z-index: 100;
   padding: 20px;
   text-align: center;
   margin-bottom: 50px;
@@ -46,6 +46,11 @@ content h1{
   color: black;
   border: 2px solid black;
   border-radius: 4px;
+  transition: all 200ms ease-in-out;
 }
 
-
+.home-link:hover{
+  background-color: black;
+  color: wheat;
+  opacity: .5;
+}

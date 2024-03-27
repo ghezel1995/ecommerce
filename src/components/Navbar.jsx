@@ -44,7 +44,7 @@ export const Navbar = ({ isAuthenticated, handleLogout }) => {
             )}
           </>
         )}
-        <Link to='/' className='link'>
+        <Link to='/shop' className='link'>
           Shop
         </Link>
         <Link to='cart' className='link'>
