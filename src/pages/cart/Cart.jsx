@@ -7,9 +7,13 @@ import './Cart.css';
 import { Checkout } from './Checkout';
 
 export const Cart = () => {
-  const { cartItems, getTotalAmount } = useContext(ShopContext);
+  const { cartItems, getTotalAmount, resetCart } = useContext(ShopContext);
   const totalAmount = getTotalAmount();
   const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    resetCart();
+  };
 
   return (
     <div className='cart'>
@@ -22,7 +26,7 @@ export const Cart = () => {
             }
           })}
           {totalAmount > 0 ? (
-            <Checkout totalAmount={totalAmount} />
+            <Checkout totalAmount={totalAmount} onCheckout={handleCheckout} />
           ) : (
             <h1>The Cart is empty.</h1>
           )}
