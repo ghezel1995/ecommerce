@@ -43,7 +43,7 @@ function App() {
             />
             <Route path='shop' element={<Shop />} />
             <Route path='intro' element={<Intro />} />
-            <Route path='/cart' element={<Cart />} />
+            <Route path='/cart' element={<Cart isAuthenticated={isAuthenticated} />} />
             <Route path='/product/:id' element={<ProductDetail />} />
             <Route
               path='/signin'

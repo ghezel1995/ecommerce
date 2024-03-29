@@ -35,7 +35,6 @@
   font-size: 1.3rem;
   font-weight: 700;
   color: black;
-  margin-bottom: 20px;
   padding: 5px 20px;
   border: 1px solid black;
   border-radius: 4px;
@@ -44,27 +43,31 @@
 }
 .about-link:hover {
   color: rgb(251, 185, 63);
-   border: 1px solid rgb(251, 185, 63);
+  border: 1px solid rgb(251, 185, 63);
 }
-.icons{
-    margin-top: 30px;
-    width: 40%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.icons {
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.icon-link{
-    font-size: 1.7rem;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-      transition: all 200ms ease-in-out;
+.icon-link {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
-.icon-link:hover{
-    color: rgb(251, 185, 63);
+.icon-link:hover {
+  color: rgb(251, 185, 63);
 }
 .right {
   width: 40%;
 }
 .right img {
   width: 100%;
+}
+.about-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
 }

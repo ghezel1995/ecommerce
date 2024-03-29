@@ -19,34 +19,36 @@ export default function AboutUs() {
               choosing us. Happy shopping!
             </p>
 
-            <Link to='/shop' className='about-link'>
-              Shop
-            </Link>
-            <div className='icons'>
-              <Link
-                to='https://instagram.com'
-                className='icon-link'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <Instagram />
+            <div className='about-links'>
+              <Link to='/shop' className='about-link'>
+                Shop
               </Link>
-              <Link
-                to='https://x.com'
-                className='icon-link'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <X className='icon' />
-              </Link>
-              <Link
-                to='https://pinterest.com'
-                className='icon-link'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <Pinterest className='icon' />
-              </Link>
+              <div className='icons'>
+                <Link
+                  to='https://instagram.com'
+                  className='icon-link'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <Instagram />
+                </Link>
+                <Link
+                  to='https://x.com'
+                  className='icon-link'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <X className='icon' />
+                </Link>
+                <Link
+                  to='https://pinterest.com'
+                  className='icon-link'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <Pinterest className='icon' />
+                </Link>
+              </div>
             </div>
           </div>
           <div className='right'>

@@ -6,7 +6,7 @@ import { CartItem } from './CartItem';
 import './Cart.css';
 import { Checkout } from './Checkout';
 
-export const Cart = () => {
+export const Cart = ({ isAuthenticated }) => {
   const { cartItems, getTotalAmount, resetCart } = useContext(ShopContext);
   const totalAmount = getTotalAmount();
   const navigate = useNavigate();
@@ -26,7 +26,11 @@ export const Cart = () => {
             }
           })}
           {totalAmount > 0 ? (
-            <Checkout totalAmount={totalAmount} onCheckout={handleCheckout} />
+            <Checkout
+              totalAmount={totalAmount}
+              onCheckout={handleCheckout}
+              isAuthenticated={isAuthenticated}
+            />
           ) : (
             <h1>The Cart is empty.</h1>
           )}

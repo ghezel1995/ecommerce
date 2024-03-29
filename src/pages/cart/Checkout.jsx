@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { CreditCard, Paypal } from 'react-bootstrap-icons';
 import './Checkout.css';
+import { useNavigate } from 'react-router-dom';
 
-export const Checkout = ({ totalAmount, onCheckout }) => {
+export const Checkout = ({ totalAmount, onCheckout, isAuthenticated }) => {
   const [date, setDate] = useState(new Date());
   const [selectedOption, setSelectedOption] = useState('creditCard');
   const [name, setName] = useState('');
@@ -13,6 +14,7 @@ export const Checkout = ({ totalAmount, onCheckout }) => {
     forth: '',
   });
   const [cvv, setCvv] = useState('');
+  const nav = useNavigate()
 
   const handleDateChange = (event) => {
     const selectedDate = new Date(event.target.value);
@@ -35,29 +37,33 @@ export const Checkout = ({ totalAmount, onCheckout }) => {
         /^\d{4}$/.test(cardNumber.third) &&
         /^\d{4}$/.test(cardNumber.forth)
       ) {
-        return false; 
+        return false;
       } else {
-        return true; 
+        return true;
       }
     } else {
-      return true; 
+      return true;
     }
   };
 
   const handleCheckout = () => {
-    if (name.trim() !== '' && cvv.trim() !== '') {
-      if (handleCardNum) {
-        alert('Thank you for your shop ' + name);
-        setName('');
-        setCardNumber('');
-        setCvv('');
-        setCardNumber({ first: '', second: '', third: '', forth: '' });
-        onCheckout(); 
+    if(!isAuthenticated) {
+      nav('/signin')
+    }else{
+      if (name.trim() !== '' && cvv.trim() !== '') {
+        if (handleCardNum) {
+          alert('Thank you for your shop ' + name);
+          setName('');
+          setCardNumber('');
+          setCvv('');
+          setCardNumber({ first: '', second: '', third: '', forth: '' });
+          onCheckout();
+        } else {
+          alert('Please enter a valid card number');
+        }
       } else {
-        alert('Please enter a valid card number');
+        alert('Please enter all of fields');
       }
-    } else {
-      alert('Please enter all of fields');
     }
   };
 
