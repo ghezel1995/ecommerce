@@ -1,13 +1,13 @@
 .cart {
+  margin-top: 100px;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .cartContainer {
-  width: 80%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   padding: 20px;
 }
@@ -16,9 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-
+  align-items: flex-start;
 }
 .cartItem {
   display: flex;
@@ -47,10 +45,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.checkout{
-  margin: 50px;
-}
- .checkout button{
+.continueBtn {
   padding: 10px 15px;
   margin: 20px;
   border: 2px solid black;
@@ -58,8 +53,9 @@
   background-color: black;
   color: white;
   transition: all 200ms ease-in-out;
- }
- .checkout button:hover{
+}
+.continueBtn:hover {
   background-color: transparent;
   color: black;
- }
+}
+

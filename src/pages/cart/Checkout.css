@@ -1,0 +1,110 @@
+.checkout {
+  position: fixed;
+  width: 400px;
+  height: 100vh;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  padding: 270px 0 0 20px;
+  box-shadow: -10px 0 5px -5px rgba(157, 157, 157, 0.5);
+}
+
+.paymentMethod {
+  padding: 20px;
+}
+
+.titles {
+  font-size: 1rem;
+  color: grey;
+  margin-bottom: 5px;
+}
+
+.methodContainer {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.methodContainer input {
+  margin-right: 5px;
+}
+
+.methodContainer p {
+  margin-left: 3px;
+}
+
+.nameOnCard {
+  margin-bottom: 20px;
+}
+
+.nameOnCard input {
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.cardNumber {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cardNumber input {
+  width: 20%;
+  margin-right: 5px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 5px;
+}
+
+.cardNumber input:active {
+  border: none;
+  background-color: aliceblue;
+}
+
+.exDate {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.date {
+  margin-bottom: 10px;
+}
+
+.date input {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.totalCheckout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.totalCheckout p {
+  font-weight: 600;
+}
+
+.checkoutBtn {
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.checkoutBtn:hover {
+  background-color: transparent;
+  color: black;
+}

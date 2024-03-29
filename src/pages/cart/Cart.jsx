@@ -4,6 +4,7 @@ import { PRODUCTS } from '../../products';
 import { ShopContext } from '../../context/shop-context';
 import { CartItem } from './CartItem';
 import './Cart.css';
+import { Checkout } from './Checkout';
 
 export const Cart = () => {
   const { cartItems, getTotalAmount } = useContext(ShopContext);
@@ -13,21 +14,22 @@ export const Cart = () => {
   return (
     <div className='cart'>
       <div className='cartContainer'>
-        <h1>Your Cart Items</h1>
         <div className='cartItems'>
+          <h1>Your Cart Items</h1>
           {PRODUCTS.map((product) => {
             if (cartItems[product.id] !== 0) {
               return <CartItem data={product} />;
             }
           })}
+          {totalAmount > 0 ? (
+            <Checkout totalAmount={totalAmount} />
+          ) : (
+            <h1>The Cart is empty.</h1>
+          )}
+          <button onClick={() => navigate('/shop')} className='continueBtn'>
+            Continue Shopping
+          </button>
         </div>
-        {totalAmount > 0 ?
-        <div className='checkout'>
-          <p>Subtotal: ${totalAmount}</p>
-          <button onClick={() => navigate('/shop')}>Continue Shopping</button>
-          <button>Checkout</button>
-        </div>
-         : <h1>The Cart is empty.</h1>}
       </div>
     </div>
   );
