@@ -8,7 +8,6 @@ import { ShopContextProvider } from './context/shop-context';
 import { SignIn } from './pages/auth/SignIn';
 import { Intro } from './pages/shop/Intro';
 import { ProductDetail } from './pages/shop/ProductDetail';
-import ContactUs from './pages/Contact/ContactUs';
 import AboutUs from './pages/Contact/AboutUs';
 
 function App() {
@@ -49,7 +48,6 @@ function App() {
               path='/signin'
               element={<SignIn onAuth={handleAuthentication} />}
             />
-            <Route path='contact' element={<ContactUs />} />
             <Route path='about'  element={<AboutUs />}/>
           </Routes>
         </Router>
